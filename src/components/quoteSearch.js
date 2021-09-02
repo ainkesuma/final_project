@@ -6,11 +6,12 @@ function QuoteSearch() {
 
   let dataMarkup = "There is no data";
   if (data !== null) {
-    dataMarkup = data.quote.map(function (q) {
+    console.log(data.quotes);
+    dataMarkup = data.quotes.map(function (q) {
       return (
         <div>
           <h2>{q.body}</h2>
-          <h2>{q.author}</h2>
+          <p>{q.author}</p>
         </div>
       );
     });
@@ -23,8 +24,12 @@ function QuoteSearch() {
     event.preventDefault();
     let url = `https://favqs.com`;
     let queryString = `/api/quotes/?apikey=87c9b60580e54ff8111b262351ff9c85&filter=${title}`;
-    let httpOptions = {
+    //Authorization: Token token="YOUR_APP_TOKEN
+    let httpOptions = { 
       method: "GET",
+      headers : {
+        Authorization : `Token token="87c9b60580e54ff8111b262351ff9c85"`
+      }
     };
     function waitForData(response) {
       return response.json();
