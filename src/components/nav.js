@@ -1,14 +1,22 @@
-function Nav(props) {
-  let { title, navLinks } = props; // Destructuring Assignment
-  let links = navLinks.map(function (text) {
-    return <a href="/">{text}</a>;
-  });
+const { Link } = require("react-router-dom");
+
+function Nav({ title }) {
   return (
-    <nav>
-      <h2>{title}</h2>
-      {links}
-      <hr />
-    </nav>
+    
+    <center>
+      <nav> 
+        <Link to="/quoteSearch">
+        <button class="button button1">
+          Find Your Quote!
+        </button>
+        </Link>
+        <Link to="/randomQuote">
+        <button class="button button2">
+          Get a Random Quote!
+          </button>
+          </Link>
+      </nav>
+    </center>
   );
 }
 

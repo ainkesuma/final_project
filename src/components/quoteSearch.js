@@ -4,12 +4,14 @@ function QuoteSearch() {
   const [title, setTitle] = useState("");
   const [data, setData] = useState(null);
 
-  let dataMarkup = "There is no data";
+  let dataMarkup = "";
   if (data !== null) {
     console.log(data.quotes);
     dataMarkup = data.quotes.map(function (q) {
       return (
-        <div>
+        <div style={
+          {paddingTop: "10px", paddingBottom: "10px", border: "2px solid black"}
+          }>
           <h2>{q.body}</h2>
           <p>{q.author}</p>
         </div>
@@ -45,7 +47,7 @@ function QuoteSearch() {
 
   return (
     <center>
-      <div style={{ paddingTop: "100px" }}>
+      <div style={{ paddingTop: "100px", paddingBottom: "100px"}}>
         <form onSubmit={search}>
           <input
             type="text"
@@ -53,7 +55,8 @@ function QuoteSearch() {
             value={title}
             onChange={updateTitle}
           />
-          <input type="submit" value="Search" />
+          
+          <button type="submit"><i class="fa fa-search"></i></button>
         </form>
         <div>{dataMarkup}</div>
       </div>

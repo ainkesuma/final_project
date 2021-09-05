@@ -1,14 +1,23 @@
+const { BrowserRouter, Switch, Route } = require("react-router-dom");
 const Nav = require("./nav");
 const QuoteSearch = require("./quoteSearch");
+const RandomQuote = require("./randomQuote")
+
 
 function App() {
-  let pageTitle = "Quote";
-  let navLinks = ["Home", "About", "Contact"];
+  
   return (
-    <main>
-      <Nav title={pageTitle} navLinks={navLinks} />
-      <QuoteSearch />
-    </main>
+    <BrowserRouter>
+    <Nav/>
+    <Switch>
+    <Route path="/quoteSearch">
+          <QuoteSearch />
+        </Route>
+        <Route path="/randomQuote">
+          <RandomQuote />
+        </Route>
+    </Switch>
+    </BrowserRouter>
   );
 }
 
