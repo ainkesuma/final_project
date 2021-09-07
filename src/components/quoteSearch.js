@@ -56,7 +56,7 @@ function QuoteSearch() {
             onChange={updateTitle}
           />
           
-          <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="submit" value="Search" />
         </form>
         <div>{dataMarkup}</div>
       </div>

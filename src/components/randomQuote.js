@@ -23,14 +23,15 @@ function RandomQuote() {
 
   let dataMarkup = "";
   if (data !== null) {
-    dataMarkup = data.quotes.map(function (q) {
-      return (
-        <div>
-          <h2>{q.body}</h2>
-          <p>{q.author}</p>
-        </div>
-      );
-    });
+    console.log(data);
+    dataMarkup = (
+      <div style={
+        {paddingTop: "10px", paddingBottom: "10px", border: "2px solid black"}
+        }>
+        <h3>{data.quote.body}</h3>
+        <p>{data.quote.author}</p>
+      </div>
+    );
   }
 
     
