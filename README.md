@@ -8,4 +8,4 @@ Description of the project :
 4. The process of this project would be :
    - The user can search for a quote by typing any keyword related into the search bar
    - The user also can get a random quote
-5. More further features such as advanced filtering will be updated in anytime soon. Stay tuned!
+5. The project link : https://quotely-com.vercel.app/
