@@ -1,4 +1,4 @@
-# final_project
+# quotely.com
 
 Description of the project :
 
